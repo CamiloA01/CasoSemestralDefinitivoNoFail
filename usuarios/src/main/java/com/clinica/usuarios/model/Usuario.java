@@ -5,21 +5,28 @@ import lombok.Data;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
 
 
+@Entity
+@Table(name = "usuario")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
 public class Usuario {
     
-    @NotBlank(message = "El campo no puede estar vacio")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotBlank(message = "El campo no puede estar vacio")
+    @Column(unique = true, length = 13, nullable = false)
+    private String run;
+
+    @Column(nullable = false)
     private String gmail;
 
-    @NotBlank(message = "El campo no puede estar vacio")
+    @Column()
     private String password;
 
     @NotBlank(message = "El campo no puede estar vacio")
@@ -27,5 +34,7 @@ public class Usuario {
 
     @NotBlank(message = "El campo no puede estar vacio")
     private boolean estado;
+
+    
 
 }
