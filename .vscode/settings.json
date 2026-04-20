@@ -1,0 +1,9 @@
+{
+    "python-envs.pythonProjects": [
+        {
+            "path": "servicio_de_usuario/servicio_de_usuario/src/main/java/com/example/servicio_de_Ususarios/repository",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
+}

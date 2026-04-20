@@ -1,7 +1,6 @@
 package com.example.servicio_de_Ususarios.model;
 
 import lombok.Data;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
@@ -25,16 +24,11 @@ public class Usuario {
     @Column(nullable = false)
     private String gmail;
 
-    @Column()
+    @Column(nullable = false)
     private String password;
 
-    @NotBlank(message = "El campo no puede estar vacio")
-    private String rol;
-
-    @NotBlank(message = "El campo no puede estar vacio")
-    private boolean estado;
-
-    
+    @Column(nullable = false)
+    private String roll;
 
 }
 
