@@ -1,5 +1,4 @@
-package com.clinica.usuarios.model;
-
+package com.example.servicio_de_Ususarios.model;
 
 import lombok.Data;
 import jakarta.validation.constraints.NotBlank;
@@ -38,3 +37,4 @@ public class Usuario {
     
 
 }
+
