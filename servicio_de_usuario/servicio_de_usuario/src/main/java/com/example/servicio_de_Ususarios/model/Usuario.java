@@ -18,8 +18,8 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique = true, length = 13, nullable = false)
-    private String run;
+    @Column(nullable = false)
+    private String username;
 
     @Column(nullable = false)
     private String gmail;
@@ -29,6 +29,8 @@ public class Usuario {
 
     @Column(nullable = false)
     private String roll;
-
+  
+    @Column(nullable = false)
+    private String estado;
 }
 
