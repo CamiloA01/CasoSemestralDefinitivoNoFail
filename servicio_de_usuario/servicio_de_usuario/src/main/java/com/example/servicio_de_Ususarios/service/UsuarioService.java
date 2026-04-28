@@ -28,7 +28,7 @@ public class UsuarioService {
                 usuario.getEstado()
         );
     }
-
+    //CREAR Y GUARDAR EL USUARIO
     public UsuarioRequestDTO createUsuario(UsuarioRequestDTO requestDTO) {
         Usuario usuario = new Usuario();
         usuario.setUsername(requestDTO.getUsername());
@@ -36,7 +36,7 @@ public class UsuarioService {
         usuario.setPassword(requestDTO.getPassword());
         usuario.setRoll(requestDTO.getRoll());
         usuario.setEstado(requestDTO.getEstado());
-
+        
         Usuario savedUsuario = usuarioRepository.save(usuario);
         return mapToDTO(savedUsuario);
     }
