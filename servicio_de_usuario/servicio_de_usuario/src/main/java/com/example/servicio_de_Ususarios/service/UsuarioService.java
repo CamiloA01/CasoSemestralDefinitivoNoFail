@@ -1,7 +1,6 @@
 package com.example.servicio_de_Ususarios.service;
 
-import com.example.servicio_de_Ususarios.dto.UsuarioRequestDTO;
-import com.example.servicio_de_Ususarios.dto.UsuarioResponseDTO;
+import com.example.servicio_de_Ususarios.dto.*;
 import com.example.servicio_de_Ususarios.model.Usuario;
 import com.example.servicio_de_Ususarios.repository.usuarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +27,7 @@ public class UsuarioService {
                 usuario.getEstado()
         );
     }
-    //CREAR Y GUARDAR EL USUARIO
+
     public UsuarioRequestDTO createUsuario(UsuarioRequestDTO requestDTO) {
         Usuario usuario = new Usuario();
         usuario.setUsername(requestDTO.getUsername());
@@ -36,7 +35,7 @@ public class UsuarioService {
         usuario.setPassword(requestDTO.getPassword());
         usuario.setRoll(requestDTO.getRoll());
         usuario.setEstado(requestDTO.getEstado());
-        
+
         Usuario savedUsuario = usuarioRepository.save(usuario);
         return mapToDTO(savedUsuario);
     }

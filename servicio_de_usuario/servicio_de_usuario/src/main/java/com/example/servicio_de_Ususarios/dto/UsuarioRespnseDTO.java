@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UsuarioRespnseDTO {
     
-    private Integer id;
+    private Long id;
     private String username;
     private String gmail;
     private String password;

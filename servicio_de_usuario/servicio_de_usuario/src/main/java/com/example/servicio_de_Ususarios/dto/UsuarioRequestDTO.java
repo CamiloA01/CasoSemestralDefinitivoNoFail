@@ -8,9 +8,11 @@ import lombok.NoArgsConstructor;
 
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+
 public class UsuarioRequestDTO {
+
     @NotBlank(message = "El nombre de usuario no puede estar vacío")
     private String username;
 
